@@ -1,0 +1,19 @@
+uuid: 0387ced6-768c-4cbf-9a75-113ae1b95ddb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+      - tools
+    parent: 'tools:'
+name: Developer
+type: developer
+description: 'Creador de los proyectos '
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

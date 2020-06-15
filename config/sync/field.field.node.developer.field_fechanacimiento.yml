@@ -1,0 +1,21 @@
+uuid: ac0e8fa8-ea45-42e3-85e9-4632744e8617
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fechanacimiento
+    - node.type.developer
+  module:
+    - datetime
+id: node.developer.field_fechanacimiento
+field_name: field_fechanacimiento
+entity_type: node
+bundle: developer
+label: FechaNacimiento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

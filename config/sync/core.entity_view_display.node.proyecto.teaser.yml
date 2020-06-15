@@ -1,0 +1,89 @@
+uuid: 36f4faa5-d739-4730-95eb-c52843a12cb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.proyecto.body
+    - field.field.node.proyecto.field_developer
+    - field.field.node.proyecto.field_estado
+    - field.field.node.proyecto.field_lenguaje_base
+    - field.field.node.proyecto.field_preview
+    - field.field.node.proyecto.field_tipo_de_trabajo
+    - field.field.node.proyecto.field_titulo_del_proyecto_
+    - image.style.medium
+    - node.type.proyecto
+  module:
+    - ds
+    - image
+    - options
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_preview
+      right:
+        - body
+        - field_estado
+        - field_lenguaje_base
+id: node.proyecto.teaser
+targetEntityType: node
+bundle: proyecto
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: right
+  field_estado:
+    type: list_key
+    weight: 2
+    region: right
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_lenguaje_base:
+    type: entity_reference_entity_view
+    weight: 3
+    region: right
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_preview:
+    type: image
+    weight: 0
+    region: left
+    label: visually_hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  field_developer: true
+  field_tipo_de_trabajo: true
+  field_titulo_del_proyecto_: true
+  links: true

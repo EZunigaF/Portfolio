@@ -1,0 +1,22 @@
+uuid: bebae7cd-67ef-4b03-8858-9745c1309cc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dev_contact
+id: node.dev_contact.promote
+field_name: promote
+entity_type: node
+bundle: dev_contact
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

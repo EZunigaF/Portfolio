@@ -1,0 +1,32 @@
+uuid: 48f7fa77-02d2-4090-b0e7-26b497c41928
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_developer
+    - node.type.developer
+    - node.type.proyecto
+  content:
+    - 'node:developer:5383c3e7-2a2a-44c7-b694-5f7ab8c8f832'
+id: node.proyecto.field_developer
+field_name: field_developer
+entity_type: node
+bundle: proyecto
+label: Developer
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 5383c3e7-2a2a-44c7-b694-5f7ab8c8f832
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      developer: developer
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

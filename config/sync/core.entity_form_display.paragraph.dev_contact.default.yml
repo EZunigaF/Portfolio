@@ -1,0 +1,53 @@
+uuid: 06e6b6d3-915e-4a44-818a-109fdbed4790
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dev_contact.field_elipse
+    - field.field.paragraph.dev_contact.field_email
+    - field.field.paragraph.dev_contact.field_github
+    - field.field.paragraph.dev_contact.field_phonenumber
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.dev_contact
+  module:
+    - image
+    - link
+id: paragraph.dev_contact.default
+targetEntityType: paragraph
+bundle: dev_contact
+mode: default
+content:
+  field_elipse:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_email:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_github:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_phonenumber:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  created: true
+  status: true

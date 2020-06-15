@@ -1,0 +1,22 @@
+uuid: 0ebfcf58-a116-4739-83fa-10429169d6b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.encargos
+id: node.encargos.status
+field_name: status
+entity_type: node
+bundle: encargos
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

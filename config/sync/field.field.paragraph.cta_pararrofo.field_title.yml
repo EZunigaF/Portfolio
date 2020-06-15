@@ -1,0 +1,24 @@
+uuid: 5b8f7cd3-eaf9-44f6-bb9f-776dcc36971e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.cta_pararrofo
+  module:
+    - text
+id: paragraph.cta_pararrofo.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: cta_pararrofo
+label: title
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<h4>PASATIEMPOS</h4>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

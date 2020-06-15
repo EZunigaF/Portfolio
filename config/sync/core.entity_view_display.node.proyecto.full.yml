@@ -1,0 +1,115 @@
+uuid: 7a92ae8f-def6-4741-95de-f2d89a35f11a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.proyecto.body
+    - field.field.node.proyecto.field_developer
+    - field.field.node.proyecto.field_estado
+    - field.field.node.proyecto.field_lenguaje_base
+    - field.field.node.proyecto.field_preview
+    - field.field.node.proyecto.field_tipo_de_trabajo
+    - field.field.node.proyecto.field_titulo_del_proyecto_
+    - image.style.proyecto_full_content_
+    - node.type.proyecto
+  module:
+    - ds
+    - image
+    - options
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - links
+        - field_preview
+      left:
+        - field_estado
+        - field_lenguaje_base
+      right:
+        - field_titulo_del_proyecto_
+        - body
+      footer:
+        - field_tipo_de_trabajo
+id: node.proyecto.full
+targetEntityType: node
+bundle: proyecto
+mode: full
+content:
+  body:
+    label: inline
+    type: text_default
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: right
+  field_estado:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: left
+  field_lenguaje_base:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: left
+  field_preview:
+    weight: 1
+    label: above
+    settings:
+      image_style: proyecto_full_content_
+      image_link: content
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: image
+    region: header
+  field_tipo_de_trabajo:
+    type: entity_reference_entity_view
+    weight: 6
+    region: footer
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_titulo_del_proyecto_:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: right
+  links:
+    weight: 0
+    region: header
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_developer: true

@@ -1,0 +1,22 @@
+uuid: 655255ff-a425-4344-9485-a7ffb34260c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.developer
+id: node.developer.status
+field_name: status
+entity_type: node
+bundle: developer
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

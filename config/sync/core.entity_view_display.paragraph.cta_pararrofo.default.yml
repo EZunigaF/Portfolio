@@ -1,0 +1,68 @@
+uuid: 18b20413-7b93-4d93-8b27-cbebafe0c806
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_pararrofo.field_image
+    - field.field.paragraph.cta_pararrofo.field_texto_banner
+    - field.field.paragraph.cta_pararrofo.field_title
+    - image.style.cta_
+    - paragraphs.paragraphs_type.cta_pararrofo
+  module:
+    - ds
+    - image
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_image
+      right:
+        - field_title
+        - field_texto_banner
+id: paragraph.cta_pararrofo.default
+targetEntityType: paragraph
+bundle: cta_pararrofo
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: visually_hidden
+    settings:
+      image_style: cta_
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: left
+  field_texto_banner:
+    weight: 2
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: right
+  field_title:
+    weight: 1
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: right
+hidden: {  }

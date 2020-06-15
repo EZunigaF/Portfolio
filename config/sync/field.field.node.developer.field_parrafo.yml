@@ -1,0 +1,34 @@
+uuid: 92df23c5-2cab-4c49-b082-e5624e6fe4d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parrafo
+    - node.type.developer
+    - paragraphs.paragraphs_type.banner
+  module:
+    - entity_reference_revisions
+id: node.developer.field_parrafo
+field_name: field_parrafo
+entity_type: node
+bundle: developer
+label: Parrafo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      banner: banner
+    target_bundles_drag_drop:
+      banner:
+        enabled: true
+        weight: 3
+      cta_pararrofo:
+        weight: 2
+        enabled: false
+field_type: entity_reference_revisions

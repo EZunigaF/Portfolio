@@ -1,0 +1,30 @@
+uuid: 4eeaef9d-1b1a-405f-bb18-9681e02f8d78
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.lenguajesprogra
+  module:
+    - system
+    - views
+  theme:
+    - showcase_lite
+id: views_block__lenguajesprogra_block_1
+theme: showcase_lite
+region: footer_top_first
+weight: 0
+provider: null
+plugin: 'views_block:lenguajesprogra-block_1'
+settings:
+  id: 'views_block:lenguajesprogra-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact/ezf
+    negate: false
+    context_mapping: {  }

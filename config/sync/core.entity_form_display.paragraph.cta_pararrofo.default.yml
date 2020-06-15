@@ -1,0 +1,37 @@
+uuid: e7e1fcd1-9c6b-4232-99af-f79dd2550758
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_pararrofo.field_image
+    - field.field.paragraph.cta_pararrofo.field_texto_banner
+    - field.field.paragraph.cta_pararrofo.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.cta_pararrofo
+  module:
+    - image
+id: paragraph.cta_pararrofo.default
+targetEntityType: paragraph
+bundle: cta_pararrofo
+mode: default
+content:
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_texto_banner:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_title: true
+  status: true

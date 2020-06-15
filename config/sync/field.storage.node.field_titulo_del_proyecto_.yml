@@ -1,0 +1,21 @@
+uuid: be561934-def4-4e47-9a0a-9690e0516aa7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_titulo_del_proyecto_
+field_name: field_titulo_del_proyecto_
+entity_type: node
+type: string
+settings:
+  max_length: 80
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

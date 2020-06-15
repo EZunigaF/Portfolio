@@ -1,0 +1,10 @@
+uuid: 0d78cf82-3f84-4436-b28f-4c8bcb308fe7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.proyectos_expo
+label: 'Proyectos Expo'
+targetEntityType: node
+cache: true

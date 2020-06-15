@@ -1,0 +1,28 @@
+uuid: b687d923-9cb8-4b1f-9e2a-e2da4046f578
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_proyectos
+    - node.type.developer
+    - node.type.proyecto
+id: node.developer.field_proyectos
+field_name: field_proyectos
+entity_type: node
+bundle: developer
+label: Proyectos
+description: 'Seleccione los proyectos que desea mostrar'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      proyecto: proyecto
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

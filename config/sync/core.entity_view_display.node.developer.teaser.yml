@@ -1,0 +1,57 @@
+uuid: cf221abe-de7f-4054-97dd-5bc6993de635
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.developer.body
+    - field.field.node.developer.field_estudio_
+    - field.field.node.developer.field_fechanacimiento
+    - field.field.node.developer.field_imagen
+    - field.field.node.developer.field_parrafo
+    - field.field.node.developer.field_proyectos
+    - field.field.node.developer.field_trabajando_
+    - image.style.medium
+    - node.type.developer
+  module:
+    - image
+    - options
+    - user
+id: node.developer.teaser
+targetEntityType: node
+bundle: developer
+mode: teaser
+content:
+  field_estudio_:
+    type: list_default
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_imagen:
+    type: image
+    weight: 0
+    region: content
+    label: visually_hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+  field_trabajando_:
+    type: list_default
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_fechanacimiento: true
+  field_parrafo: true
+  field_proyectos: true

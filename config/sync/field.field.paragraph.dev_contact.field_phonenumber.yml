@@ -1,0 +1,23 @@
+uuid: 962d289a-c073-4b93-912e-27d648d2435d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_phonenumber
+    - paragraphs.paragraphs_type.dev_contact
+id: paragraph.dev_contact.field_phonenumber
+field_name: field_phonenumber
+entity_type: paragraph
+bundle: dev_contact
+label: PhoneNumber
+description: 'Numero de contacto'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: '+506 '
+  suffix: ''
+field_type: integer

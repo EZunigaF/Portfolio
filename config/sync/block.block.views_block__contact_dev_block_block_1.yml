@@ -1,0 +1,30 @@
+uuid: f6453d89-ca38-4be1-982c-5ffeaa3388ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.contact_dev_block
+  module:
+    - system
+    - views
+  theme:
+    - showcase_lite
+id: views_block__contact_dev_block_block_1
+theme: showcase_lite
+region: content_top
+weight: -7
+provider: null
+plugin: 'views_block:contact_dev_block-block_1'
+settings:
+  id: 'views_block:contact_dev_block-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact/ezf
+    negate: false
+    context_mapping: {  }

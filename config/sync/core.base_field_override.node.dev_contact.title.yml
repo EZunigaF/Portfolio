@@ -1,0 +1,18 @@
+uuid: 5c8c279c-6462-417e-8cb2-a174fcd036fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dev_contact
+id: node.dev_contact.title
+field_name: title
+entity_type: node
+bundle: dev_contact
+label: 'CONTACT DE DEVELOPER'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,92 @@
+uuid: 73809248-f85d-4d2c-a8f1-12cd3bd7341e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dev_contact.field_elipse
+    - field.field.paragraph.dev_contact.field_email
+    - field.field.paragraph.dev_contact.field_github
+    - field.field.paragraph.dev_contact.field_phonenumber
+    - paragraphs.paragraphs_type.dev_contact
+  module:
+    - ds
+    - image
+    - link
+third_party_settings:
+  ds:
+    layout:
+      id: ds_3col_stacked_fluid
+      library: ds/ds_3col_stacked_fluid
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          header: div
+          left: div
+          middle: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - field_elipse
+      left:
+        - field_phonenumber
+      middle:
+        - field_email
+      right:
+        - field_github
+id: paragraph.dev_contact.default
+targetEntityType: paragraph
+bundle: dev_contact
+mode: default
+content:
+  field_elipse:
+    weight: 0
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: header
+  field_email:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: middle
+  field_github:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: right
+  field_phonenumber:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: left
+hidden: {  }

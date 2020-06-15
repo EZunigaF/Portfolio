@@ -1,0 +1,38 @@
+uuid: bd5c13d4-3228-40f7-ab97-36ceabc6da92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_elipse
+    - paragraphs.paragraphs_type.dev_contact
+  module:
+    - image
+id: paragraph.dev_contact.field_elipse
+field_name: field_elipse
+entity_type: paragraph
+bundle: dev_contact
+label: 'Elipse Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

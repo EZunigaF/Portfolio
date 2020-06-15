@@ -1,0 +1,18 @@
+uuid: aac9526e-ad27-4a31-96e3-0bda2c112d45
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.developer
+id: node.developer.title
+field_name: title
+entity_type: node
+bundle: developer
+label: 'Nombre '
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,30 @@
+uuid: 288d906f-572a-4731-b04e-751a59787666
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.encargos.body
+    - node.type.encargos
+  module:
+    - text
+    - user
+id: node.encargos.teaser
+targetEntityType: node
+bundle: encargos
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

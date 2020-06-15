@@ -1,0 +1,37 @@
+uuid: ac9d1306-b751-467e-8e1c-3a48eb6a50d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cta_dev
+    - node.type.dev_contact
+    - paragraphs.paragraphs_type.banner
+  module:
+    - entity_reference_revisions
+id: node.dev_contact.field_cta_dev
+field_name: field_cta_dev
+entity_type: node
+bundle: dev_contact
+label: 'CTA devContact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      banner: banner
+    target_bundles_drag_drop:
+      banner:
+        enabled: true
+        weight: 4
+      cta_pararrofo:
+        weight: 5
+        enabled: false
+      dev_contact:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

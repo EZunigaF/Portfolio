@@ -1,0 +1,29 @@
+uuid: baa4fc0c-05ef-43b8-8b0a-28a33c69c041
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_de_trabajo
+    - node.type.proyecto
+    - taxonomy.vocabulary.encargos
+id: node.proyecto.field_tipo_de_trabajo
+field_name: field_tipo_de_trabajo
+entity_type: node
+bundle: proyecto
+label: 'TIPO DE TRABAJO'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      encargos: encargos
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

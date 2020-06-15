@@ -1,0 +1,30 @@
+uuid: a507b279-912a-4cee-ac47-92a44db443af
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_trabajando_
+field_name: field_trabajando_
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Si
+      label: Si
+    -
+      value: 'No'
+      label: 'No'
+    -
+      value: 'En busca'
+      label: 'En busca'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

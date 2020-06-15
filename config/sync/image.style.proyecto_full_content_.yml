@@ -1,0 +1,15 @@
+uuid: 5e12b662-5b09-4680-b947-6f655ae74213
+langcode: en
+status: true
+dependencies: {  }
+name: proyecto_full_content_
+label: 'Proyecto full content style'
+effects:
+  89617d3c-27c6-41fb-9d58-a37515118eb9:
+    uuid: 89617d3c-27c6-41fb-9d58-a37515118eb9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1280
+      height: 720
+      anchor: center-top

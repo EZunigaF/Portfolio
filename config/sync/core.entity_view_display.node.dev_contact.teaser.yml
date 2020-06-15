@@ -1,0 +1,22 @@
+uuid: f4b5e474-348f-4df0-9968-c9c7be99ab2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dev_contact.field_cta_dev
+    - node.type.dev_contact
+  module:
+    - user
+id: node.dev_contact.teaser
+targetEntityType: node
+bundle: dev_contact
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_cta_dev: true

@@ -1,0 +1,30 @@
+uuid: 726a9b4c-f85b-4de4-bb07-e372a307d411
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.proyectos_viewblock
+  module:
+    - system
+    - views
+  theme:
+    - showcase_lite
+id: views_block__proyectos_viewblock_block_1
+theme: showcase_lite
+region: content_bottom_first
+weight: 0
+provider: null
+plugin: 'views_block:proyectos_viewblock-block_1'
+settings:
+  id: 'views_block:proyectos_viewblock-block_1'
+  label: 'PROYECTOS '
+  provider: views
+  label_display: visible
+  views_label: 'PROYECTOS '
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/3
+    negate: false
+    context_mapping: {  }

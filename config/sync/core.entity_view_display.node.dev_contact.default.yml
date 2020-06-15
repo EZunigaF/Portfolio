@@ -1,0 +1,30 @@
+uuid: f0fca043-1cfa-43f2-b202-95a3ede8391c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dev_contact.field_cta_dev
+    - node.type.dev_contact
+  module:
+    - entity_reference_revisions
+    - user
+id: node.dev_contact.default
+targetEntityType: node
+bundle: dev_contact
+mode: default
+content:
+  field_cta_dev:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

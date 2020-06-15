@@ -1,0 +1,22 @@
+uuid: 6d5d1bb1-98e0-47a4-87a1-8aece70723bd
+langcode: en
+status: true
+dependencies: {  }
+name: dev_stue
+label: 'DEV Style'
+effects:
+  74e1c0b3-cae9-4274-a0ce-1e0e1e798a70:
+    uuid: 74e1c0b3-cae9-4274-a0ce-1e0e1e798a70
+    id: image_resize
+    weight: -9
+    data:
+      width: 700
+      height: 700
+  b009df8d-26d0-4a99-9fb1-a6febbcbfad6:
+    uuid: b009df8d-26d0-4a99-9fb1-a6febbcbfad6
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1280
+      height: 720
+      anchor: center-center

@@ -1,0 +1,132 @@
+uuid: 8d184c68-0c38-4f06-9173-8cbc81043799
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.developer.body
+    - field.field.node.developer.field_estudio_
+    - field.field.node.developer.field_fechanacimiento
+    - field.field.node.developer.field_imagen
+    - field.field.node.developer.field_parrafo
+    - field.field.node.developer.field_proyectos
+    - field.field.node.developer.field_trabajando_
+    - image.style.dev_stue
+    - node.type.developer
+  module:
+    - datetime
+    - ds
+    - entity_reference_revisions
+    - image
+    - options
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_3col_stacked_fluid
+      library: ds/ds_3col_stacked_fluid
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          header: div
+          left: div
+          middle: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - links
+        - field_imagen
+      left:
+        - field_trabajando_
+        - field_estudio_
+      middle:
+        - node_title
+        - field_fechanacimiento
+      right:
+        - field_proyectos
+      footer:
+        - body
+        - field_parrafo
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 4
+        label: hidden
+        formatter: default
+id: node.developer.full
+targetEntityType: node
+bundle: developer
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    region: footer
+  field_estudio_:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: left
+  field_fechanacimiento:
+    weight: 5
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: d-m-y
+    third_party_settings: {  }
+    type: datetime_custom
+    region: middle
+  field_imagen:
+    type: image
+    weight: 1
+    region: header
+    label: visually_hidden
+    settings:
+      image_style: dev_stue
+      image_link: ''
+    third_party_settings: {  }
+  field_parrafo:
+    type: entity_reference_revisions_entity_view
+    weight: 8
+    region: footer
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_proyectos:
+    weight: 6
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: right
+  field_trabajando_:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: left
+  links:
+    weight: 0
+    region: header
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

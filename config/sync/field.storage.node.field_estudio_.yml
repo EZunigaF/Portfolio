@@ -1,0 +1,27 @@
+uuid: a25ffecf-28fd-42c2-9086-adac0b1b0647
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_estudio_
+field_name: field_estudio_
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Si
+      label: Si
+    -
+      value: 'No'
+      label: 'No'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

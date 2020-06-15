@@ -1,0 +1,39 @@
+uuid: c252be4e-83ca-4520-9c60-a89039ab681c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.cta_pararrofo
+    - paragraphs.paragraphs_type.dev_contact
+  module:
+    - entity_reference_revisions
+id: paragraph.banner.field_cta
+field_name: field_cta
+entity_type: paragraph
+bundle: banner
+label: CTA
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      cta_pararrofo: cta_pararrofo
+      dev_contact: dev_contact
+    target_bundles_drag_drop:
+      banner:
+        weight: 3
+        enabled: false
+      cta_pararrofo:
+        enabled: true
+        weight: 4
+      dev_contact:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

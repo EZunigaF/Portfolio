@@ -1,0 +1,28 @@
+uuid: 7c323308-9eda-443a-b937-fb3121ef5655
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.encargos.body
+    - node.type.encargos
+  module:
+    - text
+    - user
+id: node.encargos.default
+targetEntityType: node
+bundle: encargos
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

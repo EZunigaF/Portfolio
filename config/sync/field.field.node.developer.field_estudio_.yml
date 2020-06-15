@@ -1,0 +1,21 @@
+uuid: da950bfb-cd54-43cf-8f1d-d40b20323cbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_estudio_
+    - node.type.developer
+  module:
+    - options
+id: node.developer.field_estudio_
+field_name: field_estudio_
+entity_type: node
+bundle: developer
+label: 'Estudio '
+description: 'Se encuentra estudiando'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

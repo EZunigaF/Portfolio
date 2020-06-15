@@ -1,0 +1,120 @@
+uuid: 586a2ace-c82f-4599-b225-f7911e97d7b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.developer.body
+    - field.field.node.developer.field_estudio_
+    - field.field.node.developer.field_fechanacimiento
+    - field.field.node.developer.field_imagen
+    - field.field.node.developer.field_parrafo
+    - field.field.node.developer.field_proyectos
+    - field.field.node.developer.field_trabajando_
+    - node.type.developer
+  module:
+    - datetime
+    - ds
+    - entity_reference_revisions
+    - image
+    - options
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked_fluid
+      library: ds/ds_2col_stacked_fluid
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - links
+        - field_imagen
+        - field_fechanacimiento
+        - body
+        - field_parrafo
+      left:
+        - field_estudio_
+        - field_trabajando_
+      right:
+        - field_proyectos
+id: node.developer.default
+targetEntityType: node
+bundle: developer
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: header
+  field_estudio_:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: left
+  field_fechanacimiento:
+    weight: 4
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: d-m-y
+    third_party_settings: {  }
+    type: datetime_custom
+    region: header
+  field_imagen:
+    weight: 1
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: header
+  field_parrafo:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: header
+  field_proyectos:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: right
+  field_trabajando_:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: left
+  links:
+    weight: 0
+    region: header
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

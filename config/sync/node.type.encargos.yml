@@ -1,0 +1,17 @@
+uuid: aebb6544-0c99-40f7-aa40-79a357a7ace0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: ENCARGOS
+type: encargos
+description: 'ENCARGOS O TRABAJOS QUE EL DEVELOPER PUEDE REALIZAR Y SE LE PUEDEN AGENDAR'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

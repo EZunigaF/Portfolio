@@ -1,0 +1,21 @@
+uuid: c777a172-c09a-45be-a55c-216b91261040
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trabajando_
+    - node.type.developer
+  module:
+    - options
+id: node.developer.field_trabajando_
+field_name: field_trabajando_
+entity_type: node
+bundle: developer
+label: 'Trabajando:'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

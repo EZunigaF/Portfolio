@@ -1,0 +1,23 @@
+uuid: 13c42a6f-2a75-46e9-a4ae-8db1ef016b9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.encargos
+  module:
+    - text
+id: node.encargos.body
+field_name: body
+entity_type: node
+bundle: encargos
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,23 @@
+uuid: bec0ca0f-b814-4161-90b4-55a8498198b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.developer
+  module:
+    - text
+id: node.developer.body
+field_name: body
+entity_type: node
+bundle: developer
+label: 'Biografia '
+description: 'Biografia '
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

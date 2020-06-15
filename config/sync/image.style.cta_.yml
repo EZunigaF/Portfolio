@@ -1,0 +1,22 @@
+uuid: 32fa2905-6236-4fa0-b74c-72188be1bc80
+langcode: en
+status: true
+dependencies: {  }
+name: cta_
+label: 'CTA STYLE'
+effects:
+  253936f9-bc0d-49d2-8af5-665d5987c73a:
+    uuid: 253936f9-bc0d-49d2-8af5-665d5987c73a
+    id: image_resize
+    weight: 1
+    data:
+      width: 500
+      height: 500
+  81765ebb-5a34-446d-b69a-262c2fdc212b:
+    uuid: 81765ebb-5a34-446d-b69a-262c2fdc212b
+    id: image_rotate
+    weight: 2
+    data:
+      degrees: 180
+      bgcolor: ''
+      random: false

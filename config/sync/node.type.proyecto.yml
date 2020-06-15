@@ -1,0 +1,17 @@
+uuid: 84a257f6-72e0-4654-8587-77b7a4295720
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Proyecto
+type: proyecto
+description: 'Añadir un nuevo proyecto al portafolio'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

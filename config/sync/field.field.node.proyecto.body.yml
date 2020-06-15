@@ -1,0 +1,23 @@
+uuid: 86292691-d7a2-491e-ae1e-1f5e1614f984
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.proyecto
+  module:
+    - text
+id: node.proyecto.body
+field_name: body
+entity_type: node
+bundle: proyecto
+label: Descripción
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
