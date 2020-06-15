@@ -1,9 +1,9 @@
-uuid: 7a92ae8f-def6-4741-95de-f2d89a35f11a
+uuid: 7dda94af-f53c-4f02-909b-dfbfc3d2e934
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.full
+    - core.entity_view_mode.node.proyectos_expo_viewmode
     - field.field.node.proyecto.body
     - field.field.node.proyecto.field_developer
     - field.field.node.proyecto.field_estado
@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.proyecto.field_preview
     - field.field.node.proyecto.field_tipo_de_trabajo
     - field.field.node.proyecto.field_titulo_del_proyecto_
+    - image.style.proyectoteaser
     - node.type.proyecto
   module:
     - ds
@@ -21,8 +22,8 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: ds_2col_stacked
-      library: ds/ds_2col_stacked
+      id: ds_2col_stacked_fluid
+      library: ds/ds_2col_stacked_fluid
       disable_css: false
       entity_classes: all_classes
       settings:
@@ -39,76 +40,70 @@ third_party_settings:
         classes:
           layout_class: {  }
     regions:
-      header:
-        - links
-        - field_preview
       left:
+        - field_preview
+        - body
         - field_estado
-        - field_lenguaje_base
       right:
         - field_titulo_del_proyecto_
-        - body
-      footer:
+        - field_lenguaje_base
         - field_tipo_de_trabajo
-id: node.proyecto.full
+id: node.proyecto.proyectos_expo_viewmode
 targetEntityType: node
 bundle: proyecto
-mode: full
+mode: proyectos_expo_viewmode
 content:
   body:
-    label: inline
     type: text_default
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    region: right
-  field_estado:
     weight: 2
+    region: left
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+  field_estado:
+    type: list_key
+    weight: 5
     region: left
-  field_lenguaje_base:
-    weight: 3
     label: above
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_label
-    region: left
-  field_preview:
-    weight: 1
+  field_lenguaje_base:
+    type: entity_reference_entity_view
+    weight: 3
+    region: right
     label: above
     settings:
-      image_style: ''
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_preview:
+    type: image
+    weight: 0
+    region: left
+    label: visually_hidden
+    settings:
+      image_style: proyectoteaser
       image_link: content
     third_party_settings:
       ds:
         ds_limit: ''
-    type: image
-    region: header
   field_tipo_de_trabajo:
     type: entity_reference_entity_view
-    weight: 6
-    region: footer
+    weight: 4
+    region: right
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
   field_titulo_del_proyecto_:
-    weight: 4
+    type: string
+    weight: 1
+    region: right
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: right
-  links:
-    weight: 0
-    region: header
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_developer: true
+  links: true

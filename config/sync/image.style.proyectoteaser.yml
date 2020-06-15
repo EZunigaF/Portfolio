@@ -1,0 +1,15 @@
+uuid: a80b00d8-16e3-43ac-8192-365c840d6e13
+langcode: en
+status: true
+dependencies: {  }
+name: proyectoteaser
+label: ProyectoTeaser
+effects:
+  0559b0f0-d9d0-4bdd-8ffc-b9ae301eadaa:
+    uuid: 0559b0f0-d9d0-4bdd-8ffc-b9ae301eadaa
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 900
+      height: 550
+      anchor: center-top

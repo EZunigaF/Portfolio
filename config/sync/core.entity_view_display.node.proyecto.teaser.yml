@@ -11,7 +11,7 @@ dependencies:
     - field.field.node.proyecto.field_preview
     - field.field.node.proyecto.field_tipo_de_trabajo
     - field.field.node.proyecto.field_titulo_del_proyecto_
-    - image.style.medium
+    - image.style.proyectoteaser
     - node.type.proyecto
   module:
     - ds
@@ -22,8 +22,8 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: ds_2col
-      library: ds/ds_2col
+      id: ds_2col_fluid
+      library: ds/ds_2col_fluid
       disable_css: false
       entity_classes: all_classes
       settings:
@@ -41,32 +41,34 @@ third_party_settings:
       left:
         - field_preview
       right:
+        - field_titulo_del_proyecto_
         - body
         - field_estado
         - field_lenguaje_base
+        - field_tipo_de_trabajo
 id: node.proyecto.teaser
 targetEntityType: node
 bundle: proyecto
 mode: teaser
 content:
   body:
-    label: hidden
+    label: inline
     type: text_summary_or_trimmed
-    weight: 1
+    weight: 2
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: right
   field_estado:
-    type: list_key
-    weight: 2
+    type: list_default
+    weight: 3
     region: right
-    label: visually_hidden
+    label: inline
     settings: {  }
     third_party_settings: {  }
   field_lenguaje_base:
     type: entity_reference_entity_view
-    weight: 3
+    weight: 4
     region: right
     label: above
     settings:
@@ -79,11 +81,28 @@ content:
     region: left
     label: visually_hidden
     settings:
-      image_style: medium
+      image_style: proyectoteaser
       image_link: content
+    third_party_settings:
+      ds:
+        ds_limit: ''
+  field_tipo_de_trabajo:
+    type: entity_reference_entity_view
+    weight: 5
+    region: right
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_titulo_del_proyecto_:
+    type: string
+    weight: 1
+    region: right
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
 hidden:
   field_developer: true
-  field_tipo_de_trabajo: true
-  field_titulo_del_proyecto_: true
   links: true

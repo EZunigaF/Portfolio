@@ -1,9 +1,9 @@
-uuid: 16fa29b9-68f3-4aa4-b764-cd32ce52922c
+uuid: 541fd978-fd7e-46e8-a6d8-7c9aca93bf97
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.proyectos_expo
+    - core.entity_view_mode.node.proyecto_home
     - field.field.node.proyecto.body
     - field.field.node.proyecto.field_developer
     - field.field.node.proyecto.field_estado
@@ -11,7 +11,7 @@ dependencies:
     - field.field.node.proyecto.field_preview
     - field.field.node.proyecto.field_tipo_de_trabajo
     - field.field.node.proyecto.field_titulo_del_proyecto_
-    - image.style.proyectos_expo
+    - image.style.large
     - node.type.proyecto
   module:
     - ds
@@ -42,63 +42,73 @@ third_party_settings:
     regions:
       header:
         - field_titulo_del_proyecto_
-      left:
-        - field_preview
-      right:
-        - body
-        - field_estado
-        - field_lenguaje_base
-      footer:
         - links
-id: node.proyecto.proyectos_expo
+      left:
+        - field_tipo_de_trabajo
+        - field_estado
+      right:
+        - field_preview
+      footer:
+        - body
+        - field_lenguaje_base
+id: node.proyecto.proyecto_home
 targetEntityType: node
 bundle: proyecto
-mode: proyectos_expo
+mode: proyecto_home
 content:
   body:
     label: inline
     type: text_default
-    weight: 2
+    weight: 5
     settings: {  }
     third_party_settings: {  }
-    region: right
+    region: footer
   field_estado:
     weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
-    region: right
+    region: left
   field_lenguaje_base:
-    weight: 4
+    weight: 6
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: right
+    region: footer
   field_preview:
-    weight: 1
-    label: visually_hidden
+    weight: 4
+    label: above
     settings:
-      image_style: proyectos_expo
+      image_style: large
       image_link: content
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
     type: image
+    region: right
+  field_tipo_de_trabajo:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: left
   field_titulo_del_proyecto_:
     weight: 0
-    label: inline
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: header
   links:
-    weight: 5
-    region: footer
+    weight: 1
+    region: header
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_developer: true
-  field_tipo_de_trabajo: true

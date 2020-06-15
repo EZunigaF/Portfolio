@@ -1,0 +1,30 @@
+uuid: a17cd905-ab57-415f-b4d9-7813b426c361
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.atajos
+  module:
+    - system
+  theme:
+    - showcase_lite
+id: atajos
+theme: showcase_lite
+region: system_messages
+weight: -9
+provider: null
+plugin: 'system_menu_block:atajos'
+settings:
+  id: 'system_menu_block:atajos'
+  label: Atajos
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

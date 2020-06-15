@@ -1,0 +1,10 @@
+uuid: 06c8e407-8db7-4feb-be1e-ddca51c729a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.proyectos_expo_viewmode
+label: 'Proyectos Expo ViewMode'
+targetEntityType: node
+cache: true

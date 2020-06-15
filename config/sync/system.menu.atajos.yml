@@ -1,0 +1,8 @@
+uuid: 198757ad-d04b-41b7-ad1f-d493e69394da
+langcode: en
+status: true
+dependencies: {  }
+id: atajos
+label: Atajos
+description: ''
+locked: false

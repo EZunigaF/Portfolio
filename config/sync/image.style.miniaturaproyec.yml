@@ -1,0 +1,15 @@
+uuid: 7eaf7e53-173e-4d25-b462-7d5d7ffd8b42
+langcode: en
+status: true
+dependencies: {  }
+name: miniaturaproyec
+label: MiniaturaProyec
+effects:
+  f3847427-90ac-48e9-b512-8a8b34d913cb:
+    uuid: f3847427-90ac-48e9-b512-8a8b34d913cb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 250
+      anchor: center-top

@@ -10,7 +10,7 @@ dependencies:
     - field.field.node.proyecto.field_preview
     - field.field.node.proyecto.field_tipo_de_trabajo
     - field.field.node.proyecto.field_titulo_del_proyecto_
-    - image.style.proyectos_expo
+    - image.style.large
     - node.type.proyecto
   module:
     - ds
@@ -81,9 +81,11 @@ content:
     weight: 1
     label: above
     settings:
-      image_style: proyectos_expo
+      image_style: large
       image_link: content
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
     type: image
     region: header
   field_tipo_de_trabajo:

@@ -11,8 +11,8 @@ dependencies:
     - showcase_lite
 id: views_block__lenguajesprogra_block_1
 theme: showcase_lite
-region: footer_top_first
-weight: 0
+region: featured_top
+weight: -9
 provider: null
 plugin: 'views_block:lenguajesprogra-block_1'
 settings:
@@ -21,7 +21,7 @@ settings:
   provider: views
   label_display: visible
   views_label: ''
-  items_per_page: none
+  items_per_page: '48'
 visibility:
   request_path:
     id: request_path

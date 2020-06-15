@@ -5,11 +5,10 @@ dependencies: {  }
 name: proyecto_full_content_
 label: 'Proyecto full content style'
 effects:
-  89617d3c-27c6-41fb-9d58-a37515118eb9:
-    uuid: 89617d3c-27c6-41fb-9d58-a37515118eb9
-    id: image_scale_and_crop
-    weight: 1
+  0f0f4e63-7373-4ba7-9563-5bd0e2d7229f:
+    uuid: 0f0f4e63-7373-4ba7-9563-5bd0e2d7229f
+    id: image_resize
+    weight: -10
     data:
-      width: 1280
-      height: 720
-      anchor: center-top
+      width: 1000
+      height: 600

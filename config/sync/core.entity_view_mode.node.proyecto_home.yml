@@ -1,10 +1,10 @@
-uuid: 0d78cf82-3f84-4436-b28f-4c8bcb308fe7
+uuid: a0701a8c-d910-4be0-8163-c10fec815832
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.proyectos_expo
-label: 'Proyectos Expo'
+id: node.proyecto_home
+label: 'Proyecto HOME'
 targetEntityType: node
 cache: true

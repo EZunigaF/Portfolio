@@ -1,27 +1,27 @@
-uuid: f6453d89-ca38-4be1-982c-5ffeaa3388ad
+uuid: 38d27561-9601-4b27-bf7a-7b5938b8974a
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.contact_dev_block
+    - views.view.proyect_contact_mini
   module:
     - system
     - views
   theme:
     - showcase_lite
-id: views_block__contact_dev_block_block_1
+id: views_block__proyect_contact_mini_block_1
 theme: showcase_lite
 region: content_top
-weight: -8
+weight: -7
 provider: null
-plugin: 'views_block:contact_dev_block-block_1'
+plugin: 'views_block:proyect_contact_mini-block_1'
 settings:
-  id: 'views_block:contact_dev_block-block_1'
+  id: 'views_block:proyect_contact_mini-block_1'
   label: ''
   provider: views
   label_display: '0'
   views_label: ''
-  items_per_page: none
+  items_per_page: '48'
 visibility:
   request_path:
     id: request_path
